@@ -1,16 +1,24 @@
-function BlogListItem(props) {
-    console.log(props);
-    
-    //   const { blog, id } = props;
+import BlogListItem from "../BlogListItem/BlogListItem";
+
+import { blogs } from "../../data/blogs";
+
+function BlogList() {
+  return (
+    <>
+      <h2>Blog List Component</h2>
+
+      <BlogListItem blog={blogs[0]} id='1'/>
+
+      <BlogListItem blog={blogs[1]} id='2'/>
+
+      <BlogListItem blog={blogs[2]} id='2'/>
+
+      <BlogListItem blog={blogs[3]} id='2'/>
       
-      console.log(id);
-    
-      return (
-        <>
-         <h3>Blog List Item</h3>
-         
-        </>
-      );
-    }
-    
-    export default BlogListItem;
+      <BlogListItem blog={blogs[4]} id='2'/>
+
+    </>
+  );
+}
+
+export default BlogList;
